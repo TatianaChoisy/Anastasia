@@ -63,8 +63,8 @@
     
 }
 
-.line {
-    width: 400px;
+.line-signin {
+    width: 350px !important;
     height: 1px;
     background-color: #FFFFFF;
     margin-top: 30px;

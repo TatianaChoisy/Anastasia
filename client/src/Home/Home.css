@@ -10,16 +10,6 @@
     align-content: center;
 }
 
-.button-signup-home {
-    margin-top: 20px;
-
-}
-
-.button-signin-home {
-    margin-top: 20px;
-
-}
-
 .jumbotron-home {
     margin: 0;
     padding: 0;
@@ -37,9 +27,10 @@
     color: #FFFFFF;
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
-    font-size: 100px;
+    font-size: 90px;
     margin-bottom: 20px;
 }
+
 
 .first-paragraphe-home {
     padding: 0;
@@ -61,4 +52,109 @@
 
 }
 
+
+
+.signup-home {
+    border-radius: 50px;
+    background-color: #FEC0CB;
+    border-color: #FEC0CB;
+    color: #000000;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    margin-right: 20px;
+    width: 90px;
+    height: 35px;
+}
+
+.signin-home {
+    border-radius: 50px;
+    background-color: #FFFFFF !important;
+    border-color: #FFFFFF !important;
+    color: #000000 !important;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    margin-right: 20px;
+    width: 90px;
+    height: 35px;
+}
+
+.signup-home:hover {
+    border-radius: 50px;
+    background-color: #000000;
+    color: #FFFFFF;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    margin-right: 20px;
+    width: 90px;
+    height: 35px;
+}
+
+.signin-home:hover {
+    border-radius: 50px;
+    background-color: #000000 !important;
+    color: #FFFFFF !important;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    margin-right: 20px;
+    width: 90px;
+    height: 35px;
+}
+
+.button-home {
+    display: flex;
+}
+
+.about-home {
+    border-radius: 50px;
+    background-color: #FEC0CB;
+    border-color: #FEC0CB;
+    color: #000000;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    margin-right: 20px;
+    width: 110px;
+    height: 40px;
+}
+
+.subscribe-home {
+    border-radius: 50px;
+    background-color: #FFFFFF !important;
+    border-color: #FFFFFF !important;
+    color: #000000 !important;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    margin-right: 20px;
+    width: 110px !important;
+    height: 40px;
+}
+
+.about-home:hover {
+    border-radius: 50px;
+    background-color: #000000;
+    color: #FFFFFF;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    margin-right: 20px;
+    width: 110px;
+    height: 40px;
+}
+
+.subscribe-home:hover {
+    border-radius: 50px;
+    background-color: #000000 !important;
+    color: #FFFFFF !important;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    margin-right: 20px;
+    width: 110px !important;
+    height: 40px;
+}
 

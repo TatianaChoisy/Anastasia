@@ -4,7 +4,7 @@
   "description": "A streaming platform",
   "main": "app.js",
   "scripts": {
-    "start": "PORT=3001 nodemon app.js"
+    "start": "set PORT=3000 && nodemon bin/www"
   },
   "dependencies": {
     "bcrypt": "^3.0.6",

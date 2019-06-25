@@ -1,26 +1,25 @@
-// Modules
-
-var express = require('express'),
-    bodyParser = require('body-parser'),
-    cookieParser = require('cookie-parser');
-    path = require('path');
 
 
-// Define app to express
+// const express = require('express'),
+//     bodyParser = require('body-parser'),
+//     cookieParser = require('cookie-parser');
+//     path = require('path');
 
-var app = express();
+// // Define app to express
+
+// const app = express();
 
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(cookieParser());
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+// app.use(express.json());
+// app.use(express.urlencoded({ extended: false }));
+// app.use(express.static(path.join(__dirname, 'public')));
+// app.use(cookieParser());
+// app.use(bodyParser.json());
+// app.use(bodyParser.urlencoded({ extended: false }));
 
-// Routes
+// // Routes
 
-var signupRouter = require('./routes/signupRoute');
+// const signupRouter = require('./routes/signupRoute');
 // var signinRouter = require('./routes/signinRoute');
 // var subscribeRoute = require('./routes/subscribeRoute');
 
@@ -32,7 +31,7 @@ var signupRouter = require('./routes/signupRoute');
 
 
 
-app.use('/signup', signupRouter);
+// app.use('/signup', signupRouter);
 // app.use('/signin', signinRouter);
 // app.use('/subscribe', subscribeRouter);
 
@@ -42,4 +41,4 @@ app.use('/signup', signupRouter);
 // app.use('/home', homeRouter);
 // app.use('/search', searchRouter);
 
-module.exports = app;
+// module.exports = app;

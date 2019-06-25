@@ -73,7 +73,7 @@ export default class Signin extends Component {
           
               </div>
          
-              <div className="line"></div>
+              <div className="line-signin"></div>
               <div className="left-row">
                 <button type="submit" className="button-signin">Sign In</button>
               </div>
@@ -81,7 +81,7 @@ export default class Signin extends Component {
     
    
             <div className="left-row">
-              <p className="first-paragraphe-signin">Need an account? <Link to="/Subscribe/"><a href="/Signin">Sign In</a></Link></p>
+              <p className="first-paragraphe-signin">Need an account? <Link to="/Signup"><a href="/Signup">Sign Up</a></Link></p>
             </div>
             <div className="left-row">
               <p className="second-paragraphe-signin">Or go <Link to="/"><a href="/">Home</a>.</Link></p>
