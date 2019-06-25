@@ -1,24 +1,20 @@
 var mysql = require('mysql'),
     User = require('../models/signupModel');
-    bcrypt = require('bcrypt');
+bcrypt = require('bcrypt');
+    
 
-
-module.exports.signup = function(req, res)
-{
-    if (req.session.user)
-        return res.redirect('/');
+module.exports.signup = function (req, res) {
+    console.log(req);
     if (req.method !== 'POST') res.render('signup.js', {});
     else
     {
         if (req.body.password === req.body.password2)
-        {
-            User.create({email: req.body.email, password: req.body.password}, function(err, user) {
-                if (err) res.render('signup.js', {error: err});
-                else
-                {
-                    return res.redirect('/Signin');
-                }
-            });
+        {   
+            sql.query('SELECT * from Users', function (err, res, fields) {
+                    if (err) throw err;
+                    result(null, res);
+                  });
+            
         }
         else
             res.render('signup.js', {error: "wrong password"})

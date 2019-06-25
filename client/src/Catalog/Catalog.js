@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Catalog.css';
-import { Jumbotron, Nav } from 'react-bootstrap';
+import { Jumbotron } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 // import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 // import { Jumbotron } from 'react-bootstrap';

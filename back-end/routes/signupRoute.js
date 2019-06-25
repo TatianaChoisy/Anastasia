@@ -1,11 +1,8 @@
-// Imports
-var bcrypt = require('bcrypt');
-var jwt = require('jsonwebtoken');
+var signup_controller = require("../controllers/signupController");
+var express = require("express");
+var router = express.Router();
 
+router.route('/signup')
+    .post(signup_controller.signup);
 
-//Routes
-module.exports = {
-  signup: function (req, res) {
-    
-  }
-}
+module.exports = router;
