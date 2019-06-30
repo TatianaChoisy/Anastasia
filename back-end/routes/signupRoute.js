@@ -2,7 +2,7 @@ var signup_controller = require("../controllers/signupController");
 var express = require("express");
 var router = express.Router();
 
-router.route('/signup')
+router.route('/')
     .post(signup_controller.signup);
 
 module.exports = router;

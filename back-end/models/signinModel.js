@@ -1,18 +1,21 @@
-var sql = require('.././db');
+var mySQL = require('../database/db');
 
-
-var Data = function(data) {
-    this.id = data.id;
+var User = function(data) {
+  this.t_Pseudo = data.t_Pseudo;
+  this.t_Password = data.t_Password;
 }
 
-Data.getAllData = function (result) {
+
+User.signUp = function (findUser, result) {
+  var findUsers = Object.values(findUser);
+  var table = [[findUsers[0], findUsers[1]]];
 
 
-    sql.query('SELECT * from Users', function (err, res, fields) {
-		if (err) throw err;
-        result(null, res);
+  mySQL.query('SELECT * FROM Users WHERE t_Email = ?', [table], function (err, response) {
+        if (err) throw err;
+        result(null, response);
   });
 
 };
 
-module.exports = Data;
+module.exports = User;

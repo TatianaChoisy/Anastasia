@@ -7,42 +7,33 @@ const   express = require('express'),
 
 const app = express();
 
-
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
+
 app.use(cookieParser());
+
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+
 
 // Routes
 
 var signupRouter = require('./routes/signupRoute');
+var signinRouter = require('./routes/signinRoute');
+
+var albumsRouter = require('./routes/albumsRoute');
+
+
+app.use('/signup', signupRouter);
+app.use('/signin', signinRouter);
+
+app.use('/albums', albumsRouter);
 
 
 
-
-    app.use('/signup', signupRouter);
-
+app.listen(3002);
 
 module.exports = app;
 
-
-// var signinRouter = require('./routes/signinRoute');
-// var subscribeRoute = require('./routes/subscribeRoute');
-
-// var aboutRoute = require('./routes/aboutRoute');
-
-// var homeRoute = require('./routes/homeRoute');
-// var searchRoute = require('./routes/searchRoute');
-
-// signinRouter.initialize(app);
-// app.use('/signin', signinRouter);
-// app.use('/subscribe', subscribeRouter);
-
-// app.use('/intro', introRouter);
-// app.use('/about', aboutRouter);
-
-// app.use('/home', homeRouter);
-// app.use('/search', searchRouter);
 
