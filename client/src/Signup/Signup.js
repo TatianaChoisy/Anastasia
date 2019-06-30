@@ -8,38 +8,44 @@ export default class Signup extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      firstname: '',
-      lastname: '',
-      email: '',
-      email2: '',
-      password: '',
-      password2: ''
+      FirstName: '',
+      LastName: '',
+      Email: '',
+      Pseudo: '',
+      PasswordUser: '',
+      PasswordUser2: ''
     };
 
-    this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
 
-  }
 
-  
-  handleChange(e) {
-    let target = e.target;
-    let value = target.type === 'checkbox' ? target.checked : target.value;
-    let name = target.name;
-
-    this.setState({
-      [name]: value
-    });
   }
 
   handleSubmit(e) {
+    console.log(this.state)
     e.preventDefault();
+    //var self = this;
+    fetch('/signup', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(this.state)
+    }).then(function (res) {
+        if (res.status == 201) {
+            return res.text();
+        }
+    }).catch(function (err) {
+        console.log(err);
+    });
 
-    console.log('The form was submitted with the following data:');
-    console.log(this.state);
   }
 
-
+  handleChange(e) {
+    const { value, name } = e.target;
+    this.setState({
+      [name]: value
+    })
+  }
 
 
   render() {
@@ -48,62 +54,73 @@ export default class Signup extends Component {
 
         <Jumbotron className="jumbotron-signup">
           <div className="left-row">
-            <img src="assets/sign.svg" className="sign" alt="signup logo" />
+            <img src="/assets/images/sign.svg" className="sign" alt="signup logo" />
             <h1 className="title-signup">Sign Up</h1>
           </div>
 
-          <form onSubmit={this.handleSubmit} autoComplete="off" method="POST">
+          <form onSubmit={this.handleSubmit} autoComplete="off">
     
             <div className="row-signup">
     
-              <div className="column-left">
-              <div className="form-group">
-            
+                  <div className="column-left">
+                  <div className="form-group">
                   <div className="left-row">
                   <label className="second-title-signup">First name</label>
                   </div>
-                  <input type="firstname required" className="form-control" name="firstname" value={this.state.firstname} onChange={this.handleChange}></input>
+                  <input type="text" className="form-control" name="FirstName" value={this.state.FirstName} onChange={this.handleChange}></input>
                   </div>
-          
-                  <div className="form-group">
-                  <div className="left-row">
-                  <label className="second-title-signup">Password</label>
-                  </div>
-                  <input type="password required" className="form-control" name="password" value={this.state.password} onChange={this.handleChange}></input>
-                  </div>
-          
-                  <div className="form-group">
-                  <div className="left-row">
-                  <label className="second-title-signup">Email</label>
-                  </div>
-                  <input type="email required" className="form-control" name="email" value={this.state.email} onChange={this.handleChange}></input>
-                  </div>
+                
 
-                  </div>
-        
-                  <div className="column-right">
+              
+
                   <div className="form-group">
                   <div className="left-row">
                   <label className="second-title-signup">Last name</label>
                   </div>
-                  <input type="lastname required" className="form-control" name="lastname" value={this.state.lastname} onChange={this.handleChange}></input>
+                  <input type="text" className="form-control" name="LastName" value={this.state.LastName} onChange={this.handleChange}></input>
                   </div>
+          
+
+      
+                
+                  <div className="form-group">
+                  <div className="left-row">
+                  <label className="second-title-signup">Pseudo</label>
+                  </div>
+                  <input type="text" className="form-control" name="Pseudo" value={this.state.Pseudo} onChange={this.handleChange}></input>
+                  </div>
+                  </div>
+              
+              
+        
+                  <div className="column-right">
+                  <div className="form-group">
+                  <div className="left-row">
+                  <label className="second-title-signup">Email</label>
+                  </div>
+                  <input type="text" className="form-control" name="Email" value={this.state.Email} onChange={this.handleChange}></input>
+                  </div>
+
+ 
+                
+                  <div className="form-group">
+                  <div className="left-row">
+                  <label className="second-title-signup">Password</label>
+                  </div>
+                  <input type="password" className="form-control" name="PasswordUser" value={this.state.PasswordUser} onChange={this.handleChange}></input>
+                  </div>
+
+                
 		
 
                   <div className="form-group">
                   <div className="left-row">
                   <label className="second-title-signup">Confirm password</label>
                   </div>
-                  <input type="password required" className="form-control" name="passwordConfirm" value={this.state.password2} onChange={this.handleChange}></input>
+                  <input type="password" className="form-control" name="PasswordUser2" value={this.state.PasswordUser2} onChange={this.handleChange}></input>
                   </div>
       
         
-                  <div className="form-group">
-                  <div className="left-row">
-                  <label className="second-title-signup">Confirm email</label>
-                  </div>
-                  <input type="email required" className="form-control" name="confirm-email" value={this.state.email2} onChange={this.handleChange}></input>
-                  </div>
           
                   </div>
                   </div>

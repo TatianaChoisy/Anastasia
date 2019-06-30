@@ -11,7 +11,7 @@
     border-color: #FEC0CB;
     color: #000000;
     font-family: 'Helvetica Neue', sans-serif;
-    font-weight: 500;
+    font-weight: 800;
     font-size: 12px;
     margin-right: 20px;
     width: 90px;
@@ -24,7 +24,7 @@
     border-color: #000000;
     color: #FFFFFF;
     font-family: 'Helvetica Neue', sans-serif;
-    font-weight: 500;
+    font-weight: 800;
     font-size: 12px;
     margin-right: 20px;
     width: 90px;
@@ -36,7 +36,7 @@
     background-color: #000000;
     color: #FFFFFF;
     font-family: 'Helvetica Neue', sans-serif;
-    font-weight: 500;
+    font-weight: 800;
     font-size: 12px;
     margin-right: 20px;
     width: 90px;
@@ -48,7 +48,7 @@
     background-color: #FFFFFF;
     color: #000000;
     font-family: 'Helvetica Neue', sans-serif;
-    font-weight: 500;
+    font-weight: 800;
     font-size: 12px;
     margin-right: 20px;
     width: 90px;
@@ -61,7 +61,7 @@
     border-color: #000000;
     color: #FFFFFF;
     font-family: 'Helvetica Neue', sans-serif;
-    font-weight: 500;
+    font-weight: 800;
     font-size: 12px;
     margin-right: 20px;
     width: 115px;
@@ -73,7 +73,7 @@
     background-color: #FFFFFF;
     color: #000000;
     font-family: 'Helvetica Neue', sans-serif;
-    font-weight: 500;
+    font-weight: 800;
     font-size: 12px;
     margin-right: 20px;
     width: 115px;
@@ -114,7 +114,7 @@
     border-color: #FEC0CB;
     color: #000000;
     font-family: 'Helvetica Neue', sans-serif;
-    font-weight: 500;
+    font-weight: 800;
     font-size: 12px;
     margin-right: 20px;
     width: 90px;
@@ -127,7 +127,7 @@
     border-color: #FEC0CB !important;
     color: #000000 !important;
     font-family: 'Helvetica Neue', sans-serif;
-    font-weight: 500;
+    font-weight: 800;
     font-size: 12px;
     margin-right: 20px;
     width: 90px;
@@ -139,7 +139,7 @@
     background-color: #FFFFFF !important;
     color: #000000 !important;
     font-family: 'Helvetica Neue', sans-serif;
-    font-weight: 500;
+    font-weight: 800;
     font-size: 12px;
     margin-right: 20px;
     width: 90px;
@@ -151,7 +151,7 @@
     background-color: #FFFFFF !important;
     color: #000000 !important;
     font-family: 'Helvetica Neue', sans-serif;
-    font-weight: 500;
+    font-weight: 800;
     font-size: 12px;
     margin-right: 20px;
     width: 90px;
@@ -165,11 +165,11 @@
     border-color: #000000 !important;
     color: #FFFFFF !important;
     font-family: 'Helvetica Neue', sans-serif;
-    font-weight: 500;
+    font-weight: 800;
     font-size: 13px;
     margin-right: 20px;
     width: 115px !important;
-    height: 40px;
+    height: 50px;
 }
 
 
@@ -178,11 +178,11 @@
     background-color: #FFFFFF !important;
     color: #000000 !important;
     font-family: 'Helvetica Neue', sans-serif;
-    font-weight: 500;
+    font-weight: 800;
     font-size: 13px;
     margin-right: 20px;
     width: 115px !important;
-    height: 40px;
+    height: 50px;
 }
 
 .home-about {
@@ -191,11 +191,11 @@
     border-color: #000000;
     color: #FFFFFF;
     font-family: 'Helvetica Neue', sans-serif;
-    font-weight: 500;
+    font-weight: 800;
     font-size: 13px !important;
     margin-right: 20px;
     width: 135px !important;
-    height: 40px !important;
+    height: 50px !important;
 
 }
 
@@ -205,10 +205,10 @@
     border-color: #000000;
     color: #000000;
     font-family: 'Helvetica Neue', sans-serif;
-    font-weight: 500;
+    font-weight: 800;
     font-size: 13px !important;
     margin-right: 20px;
     width: 135px !important;
-    height: 40px !important;
+    height: 50px !important;
 
 }

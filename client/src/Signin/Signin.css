@@ -68,7 +68,7 @@
     height: 1px;
     background-color: #FFFFFF;
     margin-top: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 
@@ -96,8 +96,6 @@
     
 }
 
-
-
 .form-control {
     width: 400px;
     flex-wrap: nowrap;
@@ -107,13 +105,13 @@
     font-family: 'Helvetica Neue', sans-serif;
     font-weight: 400;
     font-size: 17px;
-    width: 95px;
+    width: 110px;
     height: 50px;
+    font-weight: 800;
+    background-color: #000000;
+    border-color: #000000;
     color: #FFFFFF;
-    font-weight: 400;
-    background-color: #EEAC57;
-    border-color: #ECA142;
-    border-radius: 12px;
+    border-radius: 50px;
     margin-bottom: 30px;
 }
 
@@ -121,12 +119,12 @@
     font-family: 'Helvetica Neue', sans-serif;
     font-weight: 400;
     font-size: 17px;
-    width: 95px;
+    width: 110px;
     height: 50px;
-    color: #000000;
-    font-weight: 400;
+    color: #FFFFFF;
+    font-weight: 800;
     background-color: #FEC0CB;
     border-color: #000000;
-    border-radius: 12px;
+    border-radius: 50px;
     margin-bottom: 30px;
 }

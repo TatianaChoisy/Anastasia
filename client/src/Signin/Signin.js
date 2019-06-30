@@ -7,32 +7,40 @@ export default class Signin extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: '',
-      password: '',
-      token: ''
+      t_Pseudo: '',
+      t_Password: ''
     };
 
-    this.onSubmit = this.onSubmit.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
 
   }
 
-
-  onSubmit(e) {
-    console.log(this.state.password, this.state.email)
+  handleSubmit(e) {
+    console.log(this.state)
     e.preventDefault();
-    var self = this;
+    //var self = this;
     fetch("/signin", {
-      method: 'POST',
-      body: JSON.stringify(this.state)
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(this.state)
     }).then(function (res) {
-      if (res) {
-        self.setState({ token: res })
-        localStorage.setItem('token', self.state.token);
-        window.location.reload();
-    }
-    })
+        if (res.status == 201) {
+            return res.text();
+        }
+    }).catch(function (err) {
+        console.log(err);
+    });
 
   }
+
+  handleChange(e) {
+    const { value, name } = e.target;
+    this.setState({
+      [name]: value
+    })
+  }
+
 
   render() {
     return (
@@ -42,40 +50,38 @@ export default class Signin extends Component {
           
           <div className="container-signin">
             <div className="left-row">
-            <img src="assets/sign.svg" className="sign" alt="signup logo"/>
+            <img src="/assets/images/sign.svg" className="sign" alt="signup logo"/>
               <h1 className="title-signin">Sign In</h1>
             </div>
 
-            <form action="/signin" method="post">
+            <form onSubmit={this.handleSubmit} autoComplete="off">
     
               <div className="row-signin">
     
-                <div className="column-left">
+                  <div className="column-left">
               
                   <div className="form-group">
-                    <div className="left-row">
-                      <label className="second-title-signin">Email</label>
-                    </div>
-                    <input type="text" className="form-control" name="email"></input>
+                  <div className="left-row">
+                  <label className="second-title-signin">Pseudo</label>
+                  </div>
+                  <input type="text" className="form-control" name="t_Pseudo" value={this.state.t_Pseudo} onChange={this.handleChange}></input>
                   </div>
           
                   <div className="form-group">
-                    <div className="left-row">
-                      <label className="second-title-signin">Password</label>
-                    </div>
-                    <input type="password" className="form-control" name="password"></input>
+                  <div className="left-row">
+                  <label className="second-title-signin">Password</label>
                   </div>
-          
-    
+                  <input type="password" className="form-control" name="t_Password" value={this.state.t_Password} onChange={this.handleChange}></input>
+                  </div>
 
-                </div>
+                  </div>
   
           
               </div>
          
               <div className="line-signin"></div>
               <div className="left-row">
-                <button type="submit" className="button-signin">Sign In</button>
+                <button type="submit" className="button-signin" href='#'>Sign In</button>
               </div>
             </form>
     
@@ -85,10 +91,11 @@ export default class Signin extends Component {
             </div>
             <div className="left-row">
               <p className="second-paragraphe-signin">Or go <Link to="/"><a href="/">Home</a>.</Link></p>
+
             </div>
-          </div>
-        </Jumbotron>
-      </div>
+            </div>
+            </Jumbotron>
+            </div>
    
     )
 

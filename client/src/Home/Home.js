@@ -19,7 +19,7 @@ export default class Home extends Component {
                 <Jumbotron className="jumbotron-home">
 
                     <h1 className="title-home">Anastasia</h1>
-                    <p className="first-paragraphe-home">Listen to your music, create your playlists,<br></br>Share them with others.</p>
+                    <p className="first-paragraphe-home">Listen to your music, create your playlists, <br></br>Share them with others.</p>
                     <p className="second-paragraphe-home">Anastasia is probably the best streaming music platform, you can subscribe or listen for free.</p>
                     
                     <div className="button-home">
