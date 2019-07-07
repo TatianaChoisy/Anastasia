@@ -10,8 +10,8 @@ var albums = function (data) {
 
 albums.getAllAlbums = function (result) {
 
-    // Database query
-    mySQL.query('SELECT * from Albums INNER JOIN Images ON Images.ImageID = Albums.ImageID INNER JOIN Artists ON Artists.ArtistID = Albums.ArtistID', function (err, res, fields) {
+ 
+    mySQL.query('SELECT * from Albums INNER JOIN Images ON Images.ImageID = Albums.ImageID INNER JOIN Artists ON Artists.ArtistID = Albums.ArtistID ', function (err, res, fields) {
         if (err) throw err;
         result(null, res);
     })

@@ -1,32 +1,21 @@
 import React, { Component } from 'react';
-import './Artists.css';
-import { Jumbotron } from 'react-bootstrap';
+import './NavLeft.css';
 import { NavLink } from 'react-router-dom';
-import Albums from './Albums'
-// import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-// import { Jumbotron } from 'react-bootstrap';
-//Navbar, Nav, NavItem, Jumbotron, Grid, Row, Col, Image, Button
 
-export default class Artists extends Component {
-    constructor(props) {
-        super(props);
-        this.state = { music: [] };
-    }
-
-
+export default class NavLeft extends Component {
 
     render() {
         return (
                 
-                        <div className="Artists">
+                       
  
-                            <Jumbotron className="jumbotron-navleft">
+                            <div className="navleft">
                                 <h1 className="title-navleft">Anastasia</h1>
                         
                             <div className="couple">
                             
                                 <img src="/assets/images/catalog.svg" className="logo" alt="home logo" />
-                                <NavLink to="/catalog/new" className="navleft-link">Catalog</NavLink>
+                                <NavLink to="/catalog" className="navleft-link">Catalog</NavLink>
                             
                     </div>
                     
@@ -60,24 +49,10 @@ export default class Artists extends Component {
                                 <NavLink to="/signout" className="navleft-link">Sign Out</NavLink>
                         </div>
                         
-                </Jumbotron>
-                
-                    <div className="navigation-catalog">
-                    <div className="nav-catalog">
-                                <NavLink to="/catalog/new" className="link-catalog">NEW</NavLink>
-                                <NavLink to="/catalog/actu" className="link-catalog">ACTU</NavLink>
-                                <NavLink to="/catalog/artists" className="link-catalog">ARTISTS</NavLink>
-                                <NavLink to="/catalog/genres" className="link-catalog">GENRES</NavLink>
-        
-                    </div>
-                    <Albums/>
                 </div>
-                
-               
-
             
                 
-                </div>
+              
             
                
         )}

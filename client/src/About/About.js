@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './About.css';
-import { Jumbotron, Navbar } from 'react-bootstrap';
+import { Navbar } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 
 export default class About extends Component {
@@ -14,7 +14,7 @@ export default class About extends Component {
                     <NavLink to="/signin" className="button-align"><button className="signin-about">SIGN IN</button></NavLink>
                 </Navbar>
 
-                <Jumbotron className="jumbotron-about">
+                <div className="div-about">
 
                     <h1 className="title-about">About Us</h1>
                     <p className="paragraphe-about">
@@ -32,7 +32,7 @@ export default class About extends Component {
 
                     
 
-                    </Jumbotron>
+                    </div>
                 
                 </div>
         

@@ -1,84 +1,17 @@
-.Genres {
+.GenresPage {
     display: flex;
-    height: 100vh;
+    height: 100%;
     background-color: #000000;
 
 }
 
-.jumbotron-navleft {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: flex-start;
-    align-content: center;
-    align-items: flex-start;
-    height: 750px;
-    width: 23%;
-    background-color: #000000;
-
-}
-
-.title-navleft {
-    color: #FFFFFF;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 30px;
-    height: 30px;
-    margin-bottom: 70px;
-    margin-top: 50px;
-}
-
-
-
-.navleft-link {
-    color: #FFFFFF;
-    font-family: 'Helvetica Neue', sans-serif;
-    font-weight: 400;
-    font-size: 17px;
-    margin: 10px;
-}
-
-.navleft-link:hover {
-    color: #FFFFFF;
-    font-family: 'Helvetica Neue', sans-serif;
-    font-weight: 400;
-    font-size: 17px;
-    margin: 10px;
-    text-decoration:none; 
-} 
-
-.navleft-link:active {
-    color: #FFFFFF;
-    font-family: 'Helvetica Neue', sans-serif;
-    font-weight: 800;
-    font-size: 17px;
-    margin: 10px;
-    text-decoration:none; 
-} 
-
-
-.logo {
-    width: 20px;
-    height: 20px;
-}
-
-.couple {
-    
-    display: flex;
-    align-items: center;
-    height: 20px;
-    margin-bottom: 25px;
-
-}
-
-
-
-.navigation-catalog {
+.column {
     background-color: #000000;
     width: 100%;
-    height: 900px;
+    height: 100%;
 }
  
-.nav-catalog {
+.navigation {
     display: flex;
     justify-content: center;
     align-content: center;
@@ -98,7 +31,7 @@
 }
 
 .link-catalog:hover {
-    color: #FFFFFF;
+    color: #FEC0CB !important;;
     font-family: 'Helvetica Neue', sans-serif;
     font-weight: 300;
     font-size: 17px;
@@ -107,10 +40,40 @@
 }
 
 .link-catalog:active {
-    color: #FFFFFF;
+    color: #FEC0CB !important;;
     font-family: 'Helvetica Neue', sans-serif;
-    font-weight: 800;
+    font-weight: 300 !important;
     font-size: 17px;
     margin: 40px;
     text-decoration:none; 
 } 
+
+.Genres {
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 200px;
+    height: 100%;
+    margin-left: 15px;
+    margin-right: 15px;
+    width: 100%;
+    
+}
+
+.image-genre {
+    width: 150px;
+    height: 150px;
+    margin: 50px;
+    margin-bottom: 5;
+}
+
+.name-genre {
+    color: #FEC0CB;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-align: center;
+}

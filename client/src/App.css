@@ -1,7 +1,9 @@
+html, body, .root, .App {
+    height: 1200px;
+    background-color: #000000;
+}
+
 .button-align {
     margin-top: 20px;
 
 }
-
-
-

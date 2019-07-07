@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Home.css';
-import { Jumbotron, Navbar } from 'react-bootstrap';
+import { Navbar } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 
 
@@ -16,7 +16,7 @@ export default class Home extends Component {
                     <NavLink to="/signin" className="button-align"><button className="signin-home">SIGN IN</button></NavLink>
                 </Navbar>
                 
-                <Jumbotron className="jumbotron-home">
+                <div className="div-home">
 
                     <h1 className="title-home">Anastasia</h1>
                     <p className="first-paragraphe-home">Listen to your music, create your playlists, <br></br>Share them with others.</p>
@@ -27,7 +27,7 @@ export default class Home extends Component {
                         <NavLink to="/subscribe/"><button className="subscribe-home">SUBSCRIBE</button></NavLink>
                     </div>
                         
-                </Jumbotron>
+                </div>
                 
             </div>
            

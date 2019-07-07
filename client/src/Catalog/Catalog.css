@@ -1,84 +1,17 @@
 .Catalog {
     display: flex;
-    height: 100vh;
+    height: 100%;
     background-color: #000000;
 
 }
 
-.jumbotron-navleft {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: flex-start;
-    align-content: center;
-    align-items: flex-start;
-    height: 750px;
-    width: 23%;
-    background-color: #000000;
-
-}
-
-.title-navleft {
-    color: #FFFFFF;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 30px;
-    height: 30px;
-    margin-bottom: 70px;
-    margin-top: 50px;
-}
-
-
-
-.navleft-link {
-    color: #FFFFFF;
-    font-family: 'Helvetica Neue', sans-serif;
-    font-weight: 400;
-    font-size: 17px;
-    margin: 10px;
-}
-
-.navleft-link:hover {
-    color: #FFFFFF;
-    font-family: 'Helvetica Neue', sans-serif;
-    font-weight: 400;
-    font-size: 17px;
-    margin: 10px;
-    text-decoration:none; 
-} 
-
-.navleft-link:active {
-    color: #FFFFFF;
-    font-family: 'Helvetica Neue', sans-serif;
-    font-weight: 800;
-    font-size: 17px;
-    margin: 10px;
-    text-decoration:none; 
-} 
-
-
-.logo {
-    width: 20px;
-    height: 20px;
-}
-
-.couple {
-    
-    display: flex;
-    align-items: center;
-    height: 20px;
-    margin-bottom: 25px;
-
-}
-
-
-
-.navigation-catalog {
+.column-catalog {
     background-color: #000000;
     width: 100%;
-    height: 900px;
+    height: 100%;
 }
  
-.nav-catalog {
+.navigation {
     display: flex;
     justify-content: center;
     align-content: center;
@@ -98,7 +31,7 @@
 }
 
 .link-catalog:hover {
-    color: #FFFFFF;
+    color: #FEC0CB !important;;
     font-family: 'Helvetica Neue', sans-serif;
     font-weight: 300;
     font-size: 17px;
@@ -107,10 +40,78 @@
 }
 
 .link-catalog:active {
-    color: #FFFFFF;
+    color: #FEC0CB !important;;
     font-family: 'Helvetica Neue', sans-serif;
-    font-weight: 800;
+    font-weight: 300 !important;
     font-size: 17px;
     margin: 40px;
     text-decoration:none; 
 } 
+
+.Artists {
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+    align-items: center;
+    flex-flow: row wrap;
+    height: 100%;
+    width: 100%;
+    
+}
+
+.image-artist {
+    width: 300px;
+    height: 300px;
+    margin: 50px;
+    margin-left: 0;
+    margin-top: 0;
+}
+
+.artists-catalog {
+    display: flex;
+}
+
+.artist-name {
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.artist-bio {
+    color: #FFFFFF;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    margin: 0;
+    width: 600px;
+}
+
+.button-catalog {
+    border-radius: 50px;
+    background-color: #000000 !important;
+    border-color: #FFFFFF !important;
+    color: #FFFFFF !important;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 800;
+    font-size: 12px;
+    margin-right: 20px;
+    margin-top: 20px;
+    width: 90px;
+    height: 35px;
+}
+
+.button-catalog:hover {
+    border-radius: 50px;
+    background-color: #FFFFFF !important;
+    color: #000000 !important;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 800;
+    font-size: 12px;
+    margin-right: 20px;
+    margin-top: 20px;
+    width: 90px;
+    height: 35px;
+}

@@ -1,37 +1,34 @@
 var User = require('../models/signupModel');
+var bcrypt = require('bcrypt');
+var jwt = require('jsonwebtoken');
+var config = require('../config/config')
 
-//Routes
-module.exports.signin = function (req, res) {
+module.exports.signIn = function (req, res) {
 
-    if (req.body.t_Pseudo)
-        return res.redirect('/');
-    if (req.method !== 'POST') res.render('signin.js', {});
-    else
-    {
-        if (req.body.t_Pseudo && req.body.t_Password)
-        {
-            User.signIn(findUser, function(err, res) {
-                if (err) res.render('signin.js', {error: err});
-                else if (typeof findUsers[0] == 'undefined') res.render('signin.js', {error: "Cannot find a user with the specified email"});
-                else {
-                    bcrypt.compare(req.body.t_Password, findUsers[0].t_Password).then(function(response) {
-                        if (response) {
-                            req.body_t_Pseudo = t_Pseudo;
-                            return res.redirect('/catalog');
-                        }
-                        else {
-                            res.render('signin.ejs', {error: "Wrong password"})
-                        }
-                    });
-                }
-            });
+    User.findUser({email: req.body.email}, function (err, data) {
+        if (err) {
+            res.send(err);
         }
-        else
-            res.render('signin.js', {error: "You must specify a email and a password"})
-    }
+        else if (data[0] !== undefined) {
+            
+            bcrypt.compare(req.body.password, data[0].password).then(function (response) {
+                if (response) {
+                    const payload = {
+                        User: data[0]
+                    };
+                    let token = jwt.sign(payload, config.secret, { expiresIn: '1h' });
+                    res.status(201).json({ token })
+                } else {
+                    res.status(204).send({ error: 'Password did not match.'})
+                }  
+            });
+            
+        }
+    })
+};
 
 
 
-}
+
 
 

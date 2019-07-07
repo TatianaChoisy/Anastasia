@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import './Signin.css';
-import { Jumbotron } from 'react-bootstrap';
 import { BrowserRouter as Link } from "react-router-dom";
 
 export default class Signin extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      t_Pseudo: '',
-      t_Password: ''
+      email: '',
+      password: ''
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -17,16 +16,19 @@ export default class Signin extends Component {
   }
 
   handleSubmit(e) {
-    console.log(this.state)
+    var that = this;
+    // console.log(this.state)
     e.preventDefault();
     //var self = this;
-    fetch("/signin", {
+    fetch('/signin', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(this.state)
     }).then(function (res) {
+      console.log('lol', res);
+      
         if (res.status == 201) {
-            return res.text();
+          that.props.history.push('/catalog')
         }
     }).catch(function (err) {
         console.log(err);
@@ -46,7 +48,7 @@ export default class Signin extends Component {
     return (
       <div className="Signin">
 
-        <Jumbotron className="jumbotron-signin">
+        <div className="div-signin">
           
           <div className="container-signin">
             <div className="left-row">
@@ -62,16 +64,16 @@ export default class Signin extends Component {
               
                   <div className="form-group">
                   <div className="left-row">
-                  <label className="second-title-signin">Pseudo</label>
+                  <label className="second-title-signin">Email</label>
                   </div>
-                  <input type="text" className="form-control" name="t_Pseudo" value={this.state.t_Pseudo} onChange={this.handleChange}></input>
+                  <input type="text" className="form-control" name="email" value={this.state.email} onChange={this.handleChange}></input>
                   </div>
           
                   <div className="form-group">
                   <div className="left-row">
                   <label className="second-title-signin">Password</label>
                   </div>
-                  <input type="password" className="form-control" name="t_Password" value={this.state.t_Password} onChange={this.handleChange}></input>
+                  <input type="password" className="form-control" name="password" value={this.state.password} onChange={this.handleChange}></input>
                   </div>
 
                   </div>
@@ -94,7 +96,7 @@ export default class Signin extends Component {
 
             </div>
             </div>
-            </Jumbotron>
+            </div>
             </div>
    
     )

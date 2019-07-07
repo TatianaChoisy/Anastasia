@@ -4,7 +4,7 @@
     background-color: #FEC0CB;
 }
 
-.jumbotron-signup {
+.div-signup {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
@@ -102,13 +102,13 @@
     font-family: 'Helvetica Neue', sans-serif;
     font-weight: 400;
     font-size: 17px;
-    width: 110px;
+    width: 100px;
     height: 50px;
     font-weight: 800;
-    background-color: #000000;
-    border-color: #000000;
+    background-color: #EEAC57;
+    border-color: #ECA142;
     color: #FFFFFF;
-    border-radius: 45px;
+    border-radius: 10px;
     margin-bottom: 30px;
 }
 
@@ -116,13 +116,13 @@
     font-family: 'Helvetica Neue', sans-serif;
     font-weight: 400;
     font-size: 17px;
-    width: 110px;
+    width: 100px;
     height: 50px;
-    color: #000000;
+    color: #FFFFFF;
     font-weight: 800;
     background-color: #FEC0CB;
-    border-color: #000000;
-    border-radius: 45px;
+    border-color: #ECA142;
+    border-radius: 10px;
     margin-bottom: 30px;
 }
 

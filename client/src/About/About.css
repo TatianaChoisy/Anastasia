@@ -80,7 +80,7 @@
     height: 35px;
 }
 
-.jumbotron-about {
+.div-about {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;

@@ -1,81 +1,51 @@
 import React, { Component } from 'react';
 import './Genres.css';
-import { Jumbotron } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
-// import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-// import { Jumbotron } from 'react-bootstrap';
-//Navbar, Nav, NavItem, Jumbotron, Grid, Row, Col, Image, Button
+import NavLeft from './Navigation/NavLeft';
 
 export default class Genres extends Component {
     constructor(props) {
         super(props);
-        this.state = { music: [] };
-    }
-
-
+        this.state = { genres: [] };
+}
+            
+    componentDidMount() {
+        fetch('/genres')
+        .then(res => res.json())
+        .then(genres => this.setState({ genres }));
+}
 
     render() {
         return (
                 
-                        <div className="Genres">
+                        <div className="GenresPage">
  
-                            <Jumbotron className="jumbotron-navleft">
-                                <h1 className="title-navleft">Anastasia</h1>
-                        
-                            <div className="couple">
-                            
-                                <img src="/assets/images/catalog.svg" className="logo" alt="home logo" />
-                                <NavLink to="/catalog/new" className="navleft-link">Catalog</NavLink>
-                            
-                    </div>
-                    
-                    <div className="couple">
-                            
-                            <img src="/assets/images/search.svg" className="logo" alt="home logo" />
-                            <NavLink to="/search" className="navleft-link">Search</NavLink>
-                        
-                            </div>
-                        
-                            <div className="couple">
-                            
-                                <img src="/assets/images/playlist.svg" className="logo" alt="home logo" />
-                                <NavLink to="/playlist" className="navleft-link">Playlist</NavLink>
-                            
-                            </div>
-                        
-                            <div className="couple">
-                            
-                                <img src="/assets/images/contact.svg" className="logo" alt="home logo" />
-                                <NavLink to="/contact" className="navleft-link">Contact</NavLink>
-                        </div>
-                        
-                            <div className="couple">
-                                <img src="/assets/images/user.svg" className="logo" alt="home logo" />
-                                <NavLink to="/account" className="navleft-link">Account</NavLink>
-                        </div>
-                        
-                            <div className="couple">
-                                <img src="/assets/images/signout.svg" className="logo" alt="home logo" />
-                                <NavLink to="/signout" className="navleft-link">Sign Out</NavLink>
-                        </div>
-                        
-                </Jumbotron>
-                
-                    <div className="navigation-catalog">
-                    <div className="nav-catalog">
-                                <NavLink to="/catalog/new" className="link-catalog">NEW</NavLink>
-                                <NavLink to="/catalog/actu" className="link-catalog">ACTU</NavLink>
-                                <NavLink to="/catalog/artists" className="link-catalog">ARTISTS</NavLink>
-                                <NavLink to="/catalog/genres" className="link-catalog">GENRES</NavLink>
+                            <NavLeft/>
+                            <div className="column">
+                            <div className="navigation">
+                                <NavLink to="/new" className="link-catalog">NEW</NavLink>
+                                <NavLink to="/actu" className="link-catalog">ACTU</NavLink>
+                                <NavLink to="/albums" className="link-catalog">ALBUMS</NavLink>
+                                <NavLink to="/genres" className="link-catalog">GENRES</NavLink>
         
-                    </div>
-                </div>
+                            </div> 
+              
+                          
+                            <div className="Genres">
+                {this.state.genres.map(function (genres) {
+                return (
+              
+              <div key={genres.GenreID} className={genres.GenreID} >
+              <img className="image-genre" key={genres.GenreID} src={genres.ImageGenre} alt="Genre image"/>
+                <p className="name-genre" key={genres.NameGenre}>{genres.NameGenre}</p>
+              </div>
+              
+          );
+        })}
+        </div>
+                        </div>
                 
-               
-
-            
-                
-                </div>
+                             </div>
             
                
         )}

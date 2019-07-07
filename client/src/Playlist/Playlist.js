@@ -1,77 +1,43 @@
 import React, { Component } from 'react';
 import './Playlist.css';
-import { Jumbotron } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
-// import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-// import { Jumbotron } from 'react-bootstrap';
-//Navbar, Nav, NavItem, Jumbotron, Grid, Row, Col, Image, Button
+import NavLeft from '../Catalog/Navigation/NavLeft';
 
 export default class Playlist extends Component {
     constructor(props) {
         super(props);
-        this.state = { music: [] };
-    }
-
-
-
-
+        this.state = { playlists: [] };
+      }
+    
+      componentDidMount() {
+        fetch('/playlists')
+          .then(res => res.json())
+          .then(playlists => this.setState({ playlists }));
+      }
 
     render() {
         return (
+                 <div className="Playlist">
                 
-                        <div className="Playlist">
- 
-                            <Jumbotron className="jumbotron-navleft">
-                                <h1 className="title-navleft">Anastasia</h1>
-                        
-                            <div className="couple">
-                            
-                                <img src="assets/images/catalog.svg" className="logo" alt="home logo" />
-                                <NavLink to="/catalog/new" className="navleft-link">Catalog</NavLink>
-                            
-                    </div>
+                <NavLeft />
+                <div className="column-column">
+                <div className="column-playlist">
+                {this.state.playlists.map(function (playlists) {
+                 return (
+              
+              <div key={playlists.PlaylistsTracksID} className={playlists.PlaylistsTracksID} >
+              <img className="image-playlist" key={playlists.PlaylistsTracksID} src={playlists.LinkImage} alt="image-album"/>
+                         <h1 className="name-playlist" key={playlists.NamePlaylist}>{playlists.NamePlaylist}</h1>
+                         
+                     </div>
                     
-                    <div className="couple">
-                            
-                            <img src="/assets/images/search.svg" className="logo" alt="home logo" />
-                            <NavLink to="/search" className="navleft-link">Search</NavLink>
-                        
-                            </div>
-                        
-                            <div className="couple">
-                            
-                                <img src="/assets/images/playlist.svg" className="logo" alt="home logo" />
-                                <NavLink to="/playlist" className="navleft-link">Playlist</NavLink>
-                            
-                            </div>
-                        
-                            <div className="couple">
-                            
-                                <img src="/assets/images/contact.svg" className="logo" alt="home logo" />
-                                <NavLink to="/contact" className="navleft-link">Contact</NavLink>
-                        </div>
-                        
-                            <div className="couple">
-                                <img src="/assets/images/user.svg" className="logo" alt="home logo" />
-                                <NavLink to="/account" className="navleft-link">Account</NavLink>
-                        </div>
-                        
-                            <div className="couple">
-                                <img src="/assets/images/signout.svg" className="logo" alt="home logo" />
-                                <NavLink to="/signout" className="navleft-link">Sign Out</NavLink>
-                        </div>
-                        
-                </Jumbotron>
-                
-          
-                
-               
-
-            
-                
+              
+                 );
+                 })}
+                </div>
+                    </div>
                 </div>
             
-               
+                              
         )}
   
 }

@@ -1,35 +1,39 @@
 var User = require('../models/signupModel');
+var bcrypt = require('bcrypt');
 
 
-module.exports.signup = function (req, res) {
+module.exports.signUp = function (req, res) {
 
-        if (req.body.PasswordUser === req.body.PasswordUser2) {
-            var addUser = new User(req.body);
+    User.findUser({ email: req.body.email }, function (err, data) {
+        if (err) {
+            res.send(err);
+        }
+        else if (data.email == undefined) {
 
-            User.signUp(addUser, function (err, response) {
-                let errors = [];
-
-                if (req.body.FirstName && req.body.LastName && req.body.Pseudo && req.body.Email && req.body.PasswordUser && req.body.t_PasswordUser2) {
-              
-                } else {
-                    errors.push({ message: 'Please fill in all fields.' });
-                }
-                
-                if (req.body.PasswordUser !== req.body.PasswordUser2) {
-                    errors.push({ message: 'Passwords do not match.' });
-                }
-                      
+            bcrypt.hash(req.body.password, 10, function (err, hash) {
                 if (err) {
                     res.send(err);
-                        
-                } else {
-                    res.json(response);
                 }
+
+                req.body.password = hash;
+                var addUser = new User(req.body);
+        
+                User.createUser(addUser, function (err, data) {
+                    if (err) {
+                        res.status(204).json(err);
+                    }  else {
+                        res.status(201).json(data);
+                    } 
+                })
+            
             });
 
+        }
+            
+        else {
+            res.status(201).json({error: 'Email already exists'})
+        }
+    })
 
-        } else
-            res.render('signup.js', { message: "Wrong password." })
-        
-    }
+}
 
