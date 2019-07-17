@@ -15,5 +15,4 @@ mySQL.query('SELECT * FROM Users WHERE email = ?', [table], function (err, respo
 
 };
 
-
 module.exports = User;

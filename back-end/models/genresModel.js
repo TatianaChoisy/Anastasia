@@ -9,7 +9,7 @@ var genres = function (data) {
 genres.getAllGenres = function (result) {
 
  
-    mySQL.query('SELECT * from Genres', function (err, res, fields) {
+    mySQL.query('SELECT * FROM Genres', function (err, res, fields) {
         if (err) throw err;
         result(null, res);
     })

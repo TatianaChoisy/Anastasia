@@ -1,7 +1,7 @@
 var playlists = require('../models/playlistsModel');
 
 
-exports.Display_all_playlists = function (req, res) {
+exports.displayAllPlaylists = function (req, res) {
 playlists.getAllPlaylists(function (err, data) {
         if (err) {
             res.send(err);
@@ -9,7 +9,16 @@ playlists.getAllPlaylists(function (err, data) {
         else {
             res.json(data);
         }
-    })
+})
+    
+// playlists.adds(function (err, data) {
+//     if (err) {
+//         res.send(err);
+//     }
+//     else {
+//         res.json(data);
+//     }
+// })
 
 
 };

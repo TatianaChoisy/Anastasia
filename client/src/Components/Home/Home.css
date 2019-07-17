@@ -1,0 +1,324 @@
+.Home {
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+}
+
+
+
+.div-home {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 870px;
+    background-color: #000000;
+}
+
+/* Mobile */
+@media screen and (max-width:800px) {
+    .div-home {
+        align-items: center;
+    }
+}
+
+/* Tablet */
+@media screen and (min-width:800px) {
+    .div-home {
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width:1000px) {
+    .div-home {
+        align-items: flex-start;
+    }
+}
+
+.title-home {
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 7em;
+    margin-bottom: 20px;
+}
+
+
+@media screen and (max-width:800px) {
+    .title-home {
+        font-size: 5em;
+    }
+}
+
+@media screen and (min-width:800px) {
+    .title-home {
+        font-size: 5.8em;
+    }
+}
+
+@media screen and (min-width:1000px) {
+    .title-home {
+        font-size: 7em;
+    }
+}
+
+.first-paragraphe-home {
+    padding: 0;
+    margin: 0;
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.9em;
+    text-align: left;
+    margin-bottom: 5px;
+
+}
+
+@media all and (max-width: 1000px) {
+    .first-paragraphe-home {
+        margin-top: 20px;
+        margin-bottom: 50px;
+        margin-left: 16px;
+    }
+}
+
+@media all and (min-width: 800px) {
+    .first-paragraphe-home {
+        margin-bottom: 50px;
+        margin-left: 40px;
+    }
+}
+
+@media all and (min-width: 1000px) {
+    .first-paragraphe-home {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin-left: 0;
+    }
+}
+
+
+.second-paragraphe-home {
+    color: #FFFFFF;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+    font-size: 1.3em;
+    margin-bottom: 50px;
+
+}
+
+@media all and (max-width: 800px) {
+    .second-paragraphe-home {
+        display: none;
+    }
+}
+
+@media all and (min-width: 800px) {
+    .second-paragraphe-home {
+        display: none;
+        margin-top: 20px !important;
+        margin-bottom: 50px !important;
+    }
+}
+
+@media all and (min-width: 1000px) {
+    .second-paragraphe-home {
+        display: block;
+        margin-bottom: 50px !important;
+    }
+}
+
+.signup-home {
+    border-radius: 50px;
+    background-color: #FEC0CB;
+    border-color: #FEC0CB;
+    color: #000000;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 800;
+    font-size: 12px;
+    margin-right: 20px;
+    width: 90px;
+    height: 35px;
+}
+
+@media screen and (max-width:800px) {
+    .signup-home {
+        background: #000000;
+        border-color: #000000;
+        color: #FFFFFF;
+        font-size: 15px;
+        
+    }
+}
+
+.signin-home {
+    border-radius: 50px;
+    background-color: #FFFFFF !important;
+    border-color: #FFFFFF !important;
+    color: #000000 !important;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 800;
+    font-size: 12px;
+    margin-right: 20px;
+    width: 90px;
+    height: 35px;
+}
+
+@media screen and (max-width:800px) {
+    .signin-home {
+        background: #000000 !important;
+        border-color: #000000 !important;
+        color: #FFFFFF !important;
+        font-size: 15px;
+        
+    }
+}
+
+
+.signup-home:hover {
+    border-radius: 50px;
+    background-color: #000000;
+    color: #FFFFFF;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 800;
+    font-size: 12px;
+    margin-right: 20px;
+    width: 90px;
+    height: 35px;
+}
+
+@media screen and (max-width:800px) {
+    .signup-home:hover {
+        background: #000000 !important ;
+        border-color: #000000 !important;
+        color: #FFFFFF !important;
+        font-size: 15px !important;
+        
+    }
+}
+
+.signin-home:hover {
+    border-radius: 50px;
+    background-color: #000000 !important;
+    color: #FFFFFF !important;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 800;
+    font-size: 12px;
+    margin-right: 20px;
+    width: 90px;
+    height: 35px;
+}
+
+@media screen and (max-width:800px) {
+    .signin-home:hover {
+        background: #000000 !important ;
+        border-color: #000000 !important;
+        color: #FFFFFF !important;
+        font-size: 15px !important;
+        
+    }
+}
+
+
+
+.button-home {
+    display: flex;
+}
+
+
+.about-home {
+    border-radius: 50px;
+    background-color: #FEC0CB;
+    border-color: #FEC0CB;
+    color: #000000;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 800;
+    font-size: 13px;
+    margin-right: 20px;
+    width: 110px;
+    height: 40px;
+}
+
+@media screen and (max-width:800px) {
+    .about-home {
+       font-size: 14px;
+        
+    }
+}
+
+
+
+.subscribe-home {
+    border-radius: 50px;
+    background-color: #FFFFFF !important;
+    border-color: #FFFFFF !important;
+    color: #000000 !important;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 800;
+    font-size: 13px;
+    margin-right: 20px;
+    width: 110px !important;
+    height: 40px;
+}
+
+@media screen and (max-width:800px) {
+    .subscribe-home {
+       font-size: 14px;
+        
+    }
+}
+
+.about-home:hover {
+    border-radius: 50px;
+    background-color: #000000;
+    color: #FFFFFF;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 800;
+    font-size: 13px;
+    margin-right: 20px;
+    width: 110px;
+    height: 40px;
+}
+
+@media screen and (max-width:800px) {
+    .about-home:hover {
+    background-color: #FEC0CB !important;
+    color: #000000 !important;
+    font-size: 14px !important;
+        
+    }
+}
+
+.subscribe-home:hover {
+    border-radius: 50px;
+    background-color: #000000 !important;
+    color: #FFFFFF !important;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 800;
+    font-size: 13px;
+    margin-right: 20px;
+    width: 110px !important;
+    height: 40px;
+}
+
+@media screen and (max-width:800px) {
+    .subscribe-home:hover {
+    background-color: #FFFFFF !important;
+    color: #000000 !important;
+    font-size: 14px !important;
+        
+    }
+}
+

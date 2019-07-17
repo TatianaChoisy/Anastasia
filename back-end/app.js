@@ -28,7 +28,9 @@ var signinRouter = require('./routes/signinRoute');
 var albumsRouter = require('./routes/albumsRoute');
 var artistsRouter = require('./routes/artistsRoute');
 var playlistsRouter = require('./routes/playlistsRoute');
-
+var tracksAlbumsRouter = require('./routes/tracksAlbumsRoute');
+var tracksPlaylistsRouter = require('./routes/tracksPlaylistsRoute');
+var searchRouter = require('./routes/searchRoute');
 var genresRouter = require('./routes/genresRoute');
 
 app.use('/signup', signupRouter);
@@ -36,8 +38,10 @@ app.use('/signin', signinRouter);
 
 app.use('/albums', albumsRouter);
 app.use('/artists', artistsRouter);
+app.use('/tracksalbums', tracksAlbumsRouter);
+app.use('/tracksplaylists', tracksPlaylistsRouter)
 app.use('/playlists', playlistsRouter);
-
+app.use('/search', searchRouter);
 app.use('/genres', genresRouter);
 
 

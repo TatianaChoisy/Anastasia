@@ -3,6 +3,6 @@ var express = require("express");
 var router = express.Router();
 
 router.route('/')
-    .get(genresController.Display_all_genres);
+    .get(genresController.displayAllGenres);
 
 module.exports = router;

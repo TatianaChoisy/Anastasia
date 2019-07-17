@@ -2,7 +2,8 @@ var albumsController = require("../controllers/albumsController");
 var express = require("express");
 var router = express.Router();
 
+// Route avec la méthode GET
 router.route('/')
-    .get(albumsController.Display_all_albums);
+    .get(albumsController.displayAllAlbums);
 
 module.exports = router;

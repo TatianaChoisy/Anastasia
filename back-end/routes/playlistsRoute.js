@@ -3,6 +3,6 @@ var express = require("express");
 var router = express.Router();
 
 router.route('/')
-    .get(playlistsController.Display_all_playlists);
+    .get(playlistsController.displayAllPlaylists);
 
 module.exports = router;

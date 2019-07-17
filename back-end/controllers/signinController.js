@@ -1,4 +1,4 @@
-var User = require('../models/signupModel');
+var User = require('../models/signinModel');
 var bcrypt = require('bcrypt');
 var jwt = require('jsonwebtoken');
 var config = require('../config/config')

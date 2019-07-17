@@ -1,7 +1,8 @@
+// Le controller appelle le model
 var artists = require('../models/artistsModel');
 
 
-exports.Display_all_artists = function (req, res) {
+exports.displayAllArtists = function (req, res) {
 artists.getAllArtists(function (err, data) {
         if (err) {
             res.send(err);

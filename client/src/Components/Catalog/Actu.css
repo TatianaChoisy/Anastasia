@@ -1,0 +1,139 @@
+.Actu {
+    display: flex;
+    background-color: #000000;
+
+}
+
+@media screen and (max-width: 1000px) {
+    .Actu {
+        flex-flow: column nowrap;
+    }
+}
+
+.column {
+    background-color: #000000;
+    width: 100%;
+    height: 100%;
+}
+ 
+
+
+.link-catalog {
+    color: #FFFFFF;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+    margin: 40px;
+    text-decoration:none; 
+}
+
+.link-catalog:hover {
+    color: #FEC0CB !important;;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+    margin: 40px;
+    text-decoration:none; 
+}
+
+.link-catalog:active {
+    color: #FEC0CB !important;;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 300 !important;
+    font-size: 17px;
+    margin: 40px;
+    text-decoration:none; 
+} 
+
+.img-actu {
+    width: 550px;
+    height: 550px;
+    margin-right: 50px;
+    margin-bottom: 100px;
+}
+
+@media screen and (max-width: 1000px) {
+    .img-actu {
+        margin: 0;
+    }
+}
+
+.row {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+@media screen and (max-width: 1000px) {
+    .row {
+        flex-flow: column nowrap;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+    }
+}
+
+
+.items {
+    display: flex;
+    flex-flow: column wrap;
+    width: 500px;
+}
+
+@media screen and (max-width: 1000px) {
+    .items {
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        margin: 50px;
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+    .row-items {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+}
+
+
+.title-actu {
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 40px;
+    margin-bottom: 20px;
+
+}
+
+@media screen and (max-width: 1000px) {
+    .title-actu {
+        text-align: center;
+    }
+}
+
+.paragraphe-actu {
+    color: #FFFFFF;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    margin: 0;
+
+}
+
+@media screen and (max-width: 1000px) {
+    .paragraphe-actu {
+        text-align: center;
+    }
+}
+
+.date-actu {
+    color: #FFFFFF;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    margin-bottom: 20px;
+
+}

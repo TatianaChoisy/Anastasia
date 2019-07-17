@@ -1,0 +1,16 @@
+.Account {
+    display: flex;
+    height: 100%;
+    background-color: #000000;
+
+}
+
+@media screen and (max-width: 1000px) {
+    .Account {
+        flex-flow: column nowrap;
+    }
+}
+
+.column {
+    width: 100%;
+}
