@@ -26,13 +26,13 @@ export default class PlayerPlaylists extends Component {
         
         return (
                
-                 <div className="PlayerTracks">
+                <div className="PlayerTracks">
                 <audio controls className="audioplayer">
-                    {this.state.playlists.map(function (playlists) { 
-                        return (
-                            <source src={playlists.PlaylistsTracksID} type="audio/mpeg"/>
-                        )}
-                    )}
+                {this.state.playlists.map(function (playlists) { 
+                    return (
+                    <source src={playlists.PlaylistsTracksID} type="audio/mpeg"/>
+                )}
+            )}
                             
                  </audio>
     

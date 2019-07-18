@@ -36,7 +36,6 @@ export default class Genres extends Component {
                 return (
               
               <div key={genres.GenreID} className={genres.GenreID} >
-              <img className="image-genre" key={genres.GenreID} src={genres.ImageGenre} alt="Genre image"/>
                 <p className="name-genre" key={genres.NameGenre}>{genres.NameGenre}</p>
               </div>
               

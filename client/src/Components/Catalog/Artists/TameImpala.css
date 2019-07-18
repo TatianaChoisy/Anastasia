@@ -1,0 +1,47 @@
+.TameImpala {
+    display: flex;
+}
+
+.tame-impala-wallpaper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    height: 600px;
+    background: url("/assets/artists/tame-impala-wallpaper.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.tame-impala-title {
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 70px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+}
+
+.little-title {
+    color: #FFFFFF;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 20px;
+    width: 70%;
+    margin-left: 50px;
+    margin-bottom: 25px;
+
+}
+
+.title-albums {
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 40px;
+    margin-top: 50px;
+    margin-left: 50px;
+}

@@ -21,7 +21,7 @@ componentDidMount() {
                      <div className="Catalog">
 
                         <NavLeft/>
-                        <div className="column-catalog">
+                        <div className="column">
                         <div className="navigation">
                                 <NavLink to="/new" className="link-catalog">NEW</NavLink>
                                 <NavLink to="/actu" className="link-catalog">ACTU</NavLink>
@@ -37,11 +37,10 @@ componentDidMount() {
               
               <div key={artists.ArtistID} className="artists-catalog" >
                                 <img className="image-artist" key={artists.ArtistID} src={artists.ImageArtist} alt="Artist Image" />
-                                <div className="right-part">
                                 <p className="artist-name" key={artists.NameArtist}>{artists.NameArtist}</p>
                                 <p className="artist-bio" key={artists.BioArtist}>{artists.BioArtist}</p>
                                 <NavLink to={artists.NameArtist.replace(/\s+/g, '').replace(/'/g, '').replace(/[ö]/g, 'o')}><button className="button-catalog">PROFIL</button></NavLink>
-                                </div>
+                              
               </div>
               
           );

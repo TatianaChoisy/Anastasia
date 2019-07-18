@@ -23,7 +23,7 @@ export default class Albums extends Component {
   componentDidMount() {
     fetch('/albums')
       .then(res => res.json())
-      .then(albums => this.setState({ albums: albums }));
+      .then(albums => this.setState({ albums: albums }, function() { console.log(this.state.albums)}));
         
         
   }

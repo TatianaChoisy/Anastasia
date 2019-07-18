@@ -72,7 +72,7 @@ export default class Search extends Component {
                                 <div className="result">
                                 {this.state.result.map(result => {
                                         return (
-                                        
+                                                        
                                                         <div key={result.ArtistID} className="result-search">
                                                                 <img className="image-artist-search" key={result.AlbumID} src={result.ImageArtist} alt="image-album" />
                                                                 <p className="name-artist-search" key={result.NameArtist}>{result.NameArtist}</p>

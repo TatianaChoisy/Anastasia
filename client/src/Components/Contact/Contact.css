@@ -45,6 +45,7 @@
         font-weight: 400;
         font-size: 40px;
         margin-bottom: 50px;
+        margin-top: 0;
 }
 
 .second-title-contact {
@@ -52,6 +53,7 @@
         font-family: 'Helvetica Neue', sans-serif;
         font-weight: 400;
         font-size: 15px;
+        margin-bottom: 10px;
 
 }
 
@@ -109,10 +111,9 @@
 
 }
 
-
-
 .form-control-contact {
     width: 300px;
+    height: 20px;
 }
 
 @media screen and (max-width: 1000px) {
@@ -126,6 +127,7 @@
     width: 300px;
     margin-right: 257px;
     margin-bottom: 20px;
+    height: 20px;
 
 }
 

@@ -13,6 +13,7 @@ import Search from './Components/Search/Search';
 import Playlist from './Components/Playlist/Playlist';
 import Contact from './Components/Contact/Contact';
 import Account from './Components/Account/Account';
+import TameImpala from './Components/Catalog/Artists/TameImpala';
 // import Subscribe from './Subscribe/Subscribe';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
@@ -36,6 +37,7 @@ export default class App extends Component {
         <Route path="/playlist" component={Playlist} />
         <Route path="/contact" component={Contact} />
         <Route path="/account" component={Account} />
+        <Route path="/TameImpala" component={TameImpala} />
         {/* <Route path="/subscribe" component={Subscribe} /> */}
           
         </Router>

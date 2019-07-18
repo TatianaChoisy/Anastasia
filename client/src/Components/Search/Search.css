@@ -11,6 +11,9 @@
     }
 }
 
+.searchbar {
+    display: flex;
+}
 
 .search-txt {
   
@@ -43,8 +46,8 @@
     display: flex;
     flex-flow: column wrap;
     align-content: flex-start;
-    width: 100%;
     margin-top: 100px;
+    width: 100%;
 
 }
 
@@ -85,7 +88,9 @@
 .result {
     display: flex;
     flex-flow: column wrap;
+    align-content: flex-start;
     align-items: center;
-    height: 100px;
+    height: 700px;
+    width: 100%;
 
 }
