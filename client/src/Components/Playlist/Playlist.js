@@ -31,11 +31,11 @@ export default class Playlist extends Component {
                 <NavLeft />
                 <div className="column-column">
                 <div className="column-playlist">
-                {this.state.playlists.map(function (playlists) {
+                {this.state.playlists.map(playlists => {
                  return (
               
               <div key={playlists.PlaylistsTracksID} className={playlists.PlaylistsTracksID} >
-              <img className="image-playlist" key={playlists.PlaylistsTracksID} src={playlists.LinkImage} alt="image-playlist" onClick={() => this.playingPlaylist(playlists.PlaylistsTracksID)}/>
+              <img className="image-playlist" key={playlists.PlaylistsTracksID} src={playlists.LinkImage} alt="image-playlist" onClick={() => this.playingPlaylist(playlists.PlaylistID)}/>
               <h1 className="name-playlist" key={playlists.NamePlaylist}>{playlists.NamePlaylist}</h1>
                          
                      </div>
@@ -44,7 +44,7 @@ export default class Playlist extends Component {
                  );
                  })}
               </div>
-              <PlayerPlaylists getPlaylists={this.state.listen} />
+              <PlayerPlaylists getTracksPlaylists={this.state.listen} />
                     </div>
                 </div>
             

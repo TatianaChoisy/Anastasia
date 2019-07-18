@@ -11,7 +11,7 @@ export default class NavLeft extends Component {
  
                             <div className="navleft">
                                 <div className="burger-title">
-                                <img src="/assets/images/menu.svg" className="burger" alt="Menu hamburger"/>
+                                {/* <img src="/assets/images/menu.svg" className="burger" alt="Menu hamburger"/> */}
                                 <h1 className="title-navleft">Anastasia</h1>
                                 </div>
                             <div className="couple">

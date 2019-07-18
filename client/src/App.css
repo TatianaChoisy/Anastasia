@@ -1,6 +1,8 @@
 html, body, .root, .App {
     height: 1200px;
     background-color: #000000;
+    margin: 0;
+    padding: 0;
 }
 
 .button-align {

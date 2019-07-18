@@ -61,7 +61,7 @@ export default class Albums extends Component {
 
             })}
           </div>
-          <PlayerAlbums getTracks={this.state.listen} />
+          <PlayerAlbums getTracksAlbums={this.state.listen} />
         </div>
               
       </div>

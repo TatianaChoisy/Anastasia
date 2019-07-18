@@ -1,37 +1,39 @@
 import React, { Component } from 'react';
 import './PlayerAlbums.css';
 
-export default class PlayerAlbum extends Component {
+export default class PlayerAlbums extends Component {
     constructor(props) {
         super(props);
         this.state = {
             tracks: [],
-            currentTrackID : ''
+            currentTrackIndex : ''
         };
 }
             
     componentDidMount() {
-        console.log(this.props.getTracks);
-        // toString() me permet de renvoyer une chaîne de caractères
-        fetch('/tracksalbums/' + this.props.getTracks.toString())
-        .then(res => res.json())
-        .then(tracks => this.setState({ tracks }, function() { console.log(this.state.tracks)}));
+        // console.log(this.props.getTracks);
+        // // toString() me permet de renvoyer une chaîne de caractères
+        // fetch('/tracksalbums/' + this.props.getTracks.toString())
+        // .then(res => res.json())
+        // .then(tracks => this.setState({ tracks }, function() { console.log(this.state.tracks)}));
         
     }
     
 
     componentDidUpdate(prevprops, prevstate) {
         console.log(prevprops.getTracks)
-        if (prevprops.getTracks !== this.props.getTracks) {
-            fetch('/tracksalbums/' + this.props.getTracks.toString())
+        if (prevprops.getTracksAlbums !== this.props.getTracksAlbums) {
+            fetch('/tracksalbums/' + this.props.getTracksAlbums.toString())
                 .then(res => res.json())
                 .then(tracks => this.setState({
                     tracks: tracks
                 }, function () {
                     this.setState({
-                        currentTrackID: tracks[0].TrackID
+                        currentTrackIndex : 0,
+                       
                     }, function () {
-                        console.log(this.state)
+                        console.log(this.state);
+                        document.getElementById('player').src = tracks[0].LinkTrack;
                         document.getElementById('player').load();
                     }
                     )
@@ -48,9 +50,9 @@ export default class PlayerAlbum extends Component {
         // if (document.getElementById('player').id === "Track-1") {
 
         //  else {
-            var previousTrack = parseInt(this.state.currentTrackID) - 1;
+            var previousTrack = this.state.currentTrackIndex - 1;
             document.getElementById('player').src = this.state.tracks[previousTrack].LinkTrack;
-            this.setState({ currentTrackID : previousTrack })
+            this.setState({ currentTrackIndex : previousTrack })
             document.getElementById('player').load();
             document.getElementById('player').play();
         
@@ -61,9 +63,9 @@ export default class PlayerAlbum extends Component {
 
         //  else {
         
-            var nextTrack = parseInt(this.state.currentTrackID) + 1;
+            var nextTrack = this.state.currentTrackIndex + 1;
             document.getElementById('player').src = this.state.tracks[nextTrack].LinkTrack;
-            this.setState({ currentTrackID : nextTrack })
+            this.setState({ currentTrackIndex : nextTrack })
 
             document.getElementById('player').load();
             document.getElementById('player').play();

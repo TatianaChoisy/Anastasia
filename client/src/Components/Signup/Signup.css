@@ -31,6 +31,7 @@
         font-weight: 500;
         font-size: 40px;
         margin-bottom: 50px;
+        margin-top: 0px;
 }
 
 .second-title-signup {
@@ -38,6 +39,7 @@
         font-family: 'Helvetica Neue', sans-serif;
         font-weight: 800;
         font-size: 15px;
+        margin-bottom: 10px;
 
 }
 

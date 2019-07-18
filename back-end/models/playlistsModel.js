@@ -7,7 +7,7 @@ var playlists = function (data) {
 }
 
 playlists.getAllPlaylists = function (result) {
-    mySQL.query('SELECT * from PlaylistsTracks INNER JOIN Playlists ON Playlists.PlaylistID = PlaylistsTracks.PlaylistID INNER JOIN Images ON Images.ImageID = Playlists.ImageID', function (err, res, fields) {
+    mySQL.query('SELECT * from Playlists INNER JOIN Images ON Images.ImageID = Playlists.ImageID WHERE Playlists.UserID = 1', function (err, res, fields) {
         if (err) throw err;
         result(null, res);
     })
