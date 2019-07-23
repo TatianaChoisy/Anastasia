@@ -14,6 +14,7 @@ import Playlist from './Components/Playlist/Playlist';
 import Contact from './Components/Contact/Contact';
 import Account from './Components/Account/Account';
 import TameImpala from './Components/Catalog/Artists/TameImpala';
+import Currents from './Components/Catalog/Artists/Albums/Currents';
 // import Subscribe from './Subscribe/Subscribe';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
@@ -38,6 +39,7 @@ export default class App extends Component {
         <Route path="/contact" component={Contact} />
         <Route path="/account" component={Account} />
         <Route path="/TameImpala" component={TameImpala} />
+        <Route path="/Currents" component={Currents} />
         {/* <Route path="/subscribe" component={Subscribe} /> */}
           
         </Router>

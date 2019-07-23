@@ -34,6 +34,7 @@ export default class PlayerPlaylists extends Component {
                         console.log(this.state);
                         document.getElementById('player').src = tracks[0].LinkTrack;
                         document.getElementById('player').load();
+                        document.getElementById('player').play();
                     }
                     )
                 

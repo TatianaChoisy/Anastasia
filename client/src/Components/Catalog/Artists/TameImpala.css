@@ -45,3 +45,14 @@
     margin-top: 50px;
     margin-left: 50px;
 }
+
+.albums-list {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.column-albums {
+    display:flex;
+    flex-direction: column;
+}

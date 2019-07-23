@@ -18,15 +18,4 @@ artists.getAllArtists = function (result) {
 
 }
 
-artists.getAllArtistsAlbums = function (result) {
-
- 
-    mySQL.query('SELECT * from Artists WHERE ArtistID = 1', function (err, res, fields) {
-        if (err) throw err;
-        result(null, res);
-    })
-
-
-}
-
 module.exports = artists;

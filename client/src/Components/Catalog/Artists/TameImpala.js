@@ -1,18 +1,29 @@
 import React, { Component } from 'react';
 import './TameImpala.css';
-import { NavLink } from 'react-router-dom';
 import NavLeft from '../Navigation/NavLeft';
+import PlayerAlbums from '../../Players/PlayerAlbums';
+import { NavLink } from 'react-router-dom';
 
 export default class TameImpala extends Component {
     constructor(props) {
         super(props);
-        this.state = { artists: [] };
+        this.state = {
+            albums: [],
+            listen: ''};
 }
     
+playingAlbum = (id) => {
+    this.setState({
+      listen: id
+    })
+  }    
+
+    
+    
 componentDidMount() {
-fetch('/artists/albums')
+fetch('/tameimpala')
 .then(res => res.json())
-.then(artists => this.setState({ artists }));
+.then(albums => this.setState({ albums }));
 }
     
     render() {
@@ -28,21 +39,23 @@ fetch('/artists/albums')
                         </div>
                                             
                 </div>
-                <h1 className="title-albums">Albums</h1>
-                {this.state.artists.map(artists => {
+                    <h1 className="title-albums">Albums</h1>
+                    <div className="albums-list">
+                {this.state.albums.map(albums => {
               return (
         
+                
+                  <div key={albums.AlbumID} className="column-albums">
+                      <img className="image-album" key={albums.ArtistID} src={albums.LinkImage} alt="image-album" onClick={() => this.playingAlbum(albums.AlbumID)} />
+                      <NavLink to={albums.NameAlbum.replace(/\s+/g, '').replace(/'/g, '').replace(/[ö]/g, 'o')}><h1 className="name-album" key={albums.NameAlbum}>{albums.NameAlbum}</h1></NavLink>
+                      </div>
                
-                  <div key={artists.AlbumID} >
-                  
-                  <img className="image-album" key={artists.ArtistID} src={artists.LinkImage} alt="image-album" onClick={() => this.playingAlbum(artists.AlbumID)} />
-                  <h1 className="name-album" key={artists.NameAlbum}>{artists.NameAlbum}</h1>
-            
-                </div>
              
               );
 
-            })}
+                })}
+                    </div>
+                    <PlayerAlbums getTracksAlbums={this.state.listen} />
             </div>
 
                 </div>

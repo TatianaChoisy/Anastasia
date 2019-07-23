@@ -35,6 +35,7 @@ export default class PlayerAlbums extends Component {
                         console.log(this.state);
                         document.getElementById('player').src = tracks[0].LinkTrack;
                         document.getElementById('player').load();
+                        document.getElementById('player').play();
                     }
                     )
                 
@@ -86,7 +87,7 @@ export default class PlayerAlbums extends Component {
                     )}
                             
                 </audio>
-                    <button><img src="/assets/player/previous.svg" className="icons" onClick={() => this.handlePrevious()}/></button>
+                    <button><img src="/assets/player/fast-forward-arrows.svg" className="icons" onClick={() => this.handlePrevious()}/></button>
                     <button><img src="/assets/player/next.svg" className="icons"onClick={() => this.handleNext()}/></button>
     
                 </div>

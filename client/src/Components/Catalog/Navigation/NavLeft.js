@@ -41,10 +41,10 @@ export default class NavLeft extends Component {
                                 <NavLink to="/contact" className="navleft-link">Contact</NavLink>
                         </div>
                         
-                            <div className="couple">
+                            {/* <div className="couple">
                                 <img src="/assets/images/user.svg" className="logo" alt="home logo" />
                                 <NavLink to="/account" className="navleft-link">Account</NavLink>
-                        </div>
+                        </div> */}
                         
                             <div className="couple">
                                 <img src="/assets/images/signout.svg" className="logo" alt="home logo" />

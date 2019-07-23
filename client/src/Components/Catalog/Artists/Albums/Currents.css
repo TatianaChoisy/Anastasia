@@ -1,0 +1,71 @@
+.Currents {
+    display: flex;
+}
+
+.currents-jacket {
+    height: 300px;
+    width: 300px;
+    margin-top: 50px;
+}
+
+.name-link-album {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.title-currents {
+    color: #FFFFFF;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    margin: 0;
+    font-weight: 200;
+}
+
+.big-title-currents {
+    color: #FFFFFF;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+}
+
+.left-currents {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    
+
+}
+
+.column-currents {
+    margin-right: 100px;
+}
+
+.plus {
+    width: 20px;
+    height: 20px;
+    margin-top: 3px;
+    margin-right: 10px;
+}
+
+.row-currents {
+    display: flex;
+    flex-direction: row;
+}
+
+.name-link-album {
+    margin-top: 50px;
+}
+
+.big-title-currents {
+    font-weight: 300;
+    text-align: center;
+}
+
+.play {
+    width: 20px;
+    height: 20px;
+    margin-top: 3px;
+    margin-left: 10px;
+    margin-right: 10px;
+}

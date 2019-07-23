@@ -32,6 +32,11 @@ var tracksAlbumsRouter = require('./routes/tracksAlbumsRoute');
 var tracksPlaylistsRouter = require('./routes/tracksPlaylistsRoute');
 var searchRouter = require('./routes/searchRoute');
 var genresRouter = require('./routes/genresRoute');
+var tameimpalaRouter = require('./routes/tameimpalaRoute');
+var currentsRouter = require('./routes/currentsRoute');
+
+var contactRouter = require('./routes/contactRoute');
+
 
 app.use('/signup', signupRouter);
 app.use('/signin', signinRouter);
@@ -43,7 +48,10 @@ app.use('/tracksplaylists', tracksPlaylistsRouter)
 app.use('/playlists', playlistsRouter);
 app.use('/search', searchRouter);
 app.use('/genres', genresRouter);
+app.use('/tameimpala', tameimpalaRouter);
+app.use('/currents', currentsRouter);
 
+app.use('/contact', contactRouter);
 
 
 app.listen(3002);

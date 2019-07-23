@@ -17,6 +17,7 @@ albums.getAllAlbums = function (result) {
             if (err) throw err;
             result(null, res);
         })
+        
    
 }
 
