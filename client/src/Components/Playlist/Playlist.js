@@ -34,9 +34,9 @@ export default class Playlist extends Component {
                 {this.state.playlists.map(playlists => {
                  return (
               
-              <div key={playlists.PlaylistsTracksID} className={playlists.PlaylistsTracksID} >
+              <div key={playlists.PlaylistsTracksID} className="the-playlist" >
               <img className="image-playlist" key={playlists.PlaylistsTracksID} src={playlists.LinkImage} alt="image-playlist" onClick={() => this.playingPlaylist(playlists.PlaylistID)}/>
-              <h1 className="name-playlist" key={playlists.NamePlaylist}>{playlists.NamePlaylist}</h1>
+              <h1 className="name-playlist-playlist" key={playlists.NamePlaylist}>{playlists.NamePlaylist}</h1>
                          
                      </div>
                     

@@ -83,7 +83,7 @@ export default class Contact extends Component {
                   </div>
                   </div>
                 
-                  <div className="form-group-contact">
+                  <div className="form-message-contact">
                   <div className="left-row-contact">
                   <label className="second-title-contact">Message</label>
                   </div>

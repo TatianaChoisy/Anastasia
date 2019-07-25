@@ -10,6 +10,7 @@ playlists.getAllPlaylists(function (err, data) {
             res.json(data);
         }
 })
+
     
 // playlists.adds(function (err, data) {
 //     if (err) {
@@ -22,3 +23,17 @@ playlists.getAllPlaylists(function (err, data) {
 
 
 };
+
+exports.displayPlaylistsFromUser = function(req,res) {
+    var request = req.params.userID;
+    console.log(request);
+    playlists.getPlaylistsFromUser(request, function (err, data) {
+        if (err) {
+            res.send(err);
+        }
+        else {
+            console.log(data);
+            res.json(data);
+        }
+    })
+}

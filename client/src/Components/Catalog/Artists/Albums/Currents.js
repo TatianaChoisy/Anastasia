@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './Currents.css';
 import NavLeft from '../../Navigation/NavLeft';
 import PlayerAlbums from '../../../Players/PlayerAlbums';
+import PlaylistModal from './PlaylistModal';
 
 export default class Currents extends Component {
     constructor(props) {
@@ -9,6 +10,9 @@ export default class Currents extends Component {
         this.state = {
             albums: [],
             tracks: [],
+            playlists: [],
+            showModal : false,
+            trackID : '',
             listen: ''
         };
 }
@@ -19,6 +23,18 @@ playingAlbum = (id) => {
     })
   }    
   
+
+showPlaylists = (TrackID) => {
+    var userID = localStorage.getItem('userID');
+    this.setState({trackID :TrackID});
+    fetch('/playlists/'+userID)
+          .then(res => res.json())
+          .then(playlists => this.setState({ playlists : playlists }, this.setState({showModal : true})));
+}
+
+closeModal = () => {
+    this.setState({showModal : false})
+}
     
 componentDidMount() {
     fetch('/currents')
@@ -35,19 +51,18 @@ componentDidMount() {
                 <NavLeft />
                 <div className="left-currents">
                     <div className="column-currents">
-                <img src="/assets/albums/currents.jpg" alt="album currents" className="currents-jacket" />
+                <img src="/assets/albums/currents.jpg" alt="album currents" className="currents-jacket"  />
                     <h1 className="big-title-currents">Currents</h1>
-                    <h2 className="big-title-currents">Tame Impala</h2>
                     </div>
                 <div className="name-link-album">
-                        {this.state.tracks.map((tracks) => { 
-                        {console.log(this)}
+                {(this.state.showModal) ? <PlaylistModal playlists={this.state.playlists} trackID={this.state.trackID} hideModal={() => this.closeModal()}></PlaylistModal> : null }
+                {this.state.tracks.map((tracks) => { 
                         return (
                             <div className="album-currents">
                                 <div className="row-currents">
-                                <img src="/assets/images/playy.svg" className="play" alt="track Currents" onClick={() => this.playingAlbum(tracks.AlbumID)}  />
-                            <img src="/assets/images/plus.svg" className="plus" />
-                            <h6 className="title-currents" key={tracks.TrackID} src={tracks.NameTrack}>{tracks.NameTrack}</h6>
+                            <img src="/assets/images/playy.svg" className="play" alt="track Currents" onClick={() => this.playingAlbum(tracks.AlbumID)} />
+                            <img src="/assets/images/plus.svg" className="plus" onClick={() => this.showPlaylists(tracks.TrackID)}/>
+                            <h6 className="title-currents" key={tracks.TrackID} src={tracks.NameTrack} >{tracks.NameTrack}</h6>
                             
                             </div>
                             

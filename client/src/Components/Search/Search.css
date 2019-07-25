@@ -30,6 +30,12 @@
 
 }
 
+@media screen and (max-width: 1000px) {
+    .search-txt {
+        width: 400px;
+    }
+}
+
 .searchbar {
     height: 100px;
 }
@@ -63,8 +69,8 @@
 
 @media screen and (max-width: 800px) {
     .image-artist-search {
-        width: 400px;
-        height: 400px;
+        width: 300px;
+        height: 300px;
         
     }
 }
@@ -80,7 +86,8 @@
 
 @media screen and (max-width: 1000px) {
     .name-artist-search {
-        font-size: 30px;
+        font-size: 20px;
+        margin-bottom: 20px;
     }
 }
 
@@ -92,4 +99,12 @@
     align-items: center;
     height: 700px;
 
+}
+
+
+@media screen and (max-width: 1000px) {
+    .result {
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+    }
 }

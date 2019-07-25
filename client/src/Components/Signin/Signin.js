@@ -22,10 +22,20 @@ export default class Signin extends Component {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(this.state)
-    }).then(function (res) {    
+    }).then((res) => {    
         if (res.status == 201) {
-          that.props.history.push('/catalog')
+          // on retourne res.json() pour que les données envoyées soient lisibles
+          // sinon la promesse n'aura pas le temps d'être résolue
+          // ce qui empechera de lire la donnée
+          return res.json();
         }
+    // result sera donc res.json()
+    }).then( (result) => {
+      // On utilise la méthode .setItem du localStorage pour y mettre le token
+      // ce qui nous permettra d'y accéder facilement depuis n'importe quel component
+      localStorage.setItem('token', result.token);
+      localStorage.setItem('userID', result.userID);
+      that.props.history.push('/catalog');
     }).catch(function (err) {
         console.log(err);
     });

@@ -87,10 +87,12 @@
 
 @media screen and (max-width: 1000px) {
     .left-row-contact {
-       justify-content: center;
+        justify-content: center;
 
     }
 }
+
+
 
 .line-contact {
     width: 853px !important;
@@ -118,7 +120,7 @@
 
 @media screen and (max-width: 1000px) {
     .form-control-contact {
-        width: 500px;
+        width: 300px;
 
     }
 }
@@ -133,7 +135,7 @@
 
 @media screen and (max-width: 1000px) {
     .form-control-pseudo {
-        width: 500px;
+        width: 300px;
         margin: 0;
         margin-bottom: 10px;
 
@@ -149,7 +151,7 @@
 
 @media screen and (max-width: 1000px) {
     .form-control-text {
-        width: 500px;
+        width: 300px;
 
     }
 }
@@ -182,3 +184,12 @@
     margin-bottom: 30px;
 }
 
+@media screen and (max-width: 1000px) {
+    .form-message-contact {
+        margin-top: 10px;
+        display: flex;
+        flex-flow: column wrap;
+        align-content: center;
+
+    }
+}

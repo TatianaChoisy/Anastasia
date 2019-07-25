@@ -63,6 +63,13 @@
     
 }
 
+@media screen and (max-width: 1000px) {
+    .Genres {
+        margin: 0;
+    }
+}
+
+
 .image-genre {
     width: 150px;
     height: 150px;

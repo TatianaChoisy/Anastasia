@@ -77,6 +77,10 @@ export default class PlayerPlaylists extends Component {
         return (
                
                  <div className="PlayerAlbums">
+                 <div className="buttons-left-right">
+                    <i className="fas fa-chevron-circle-left" onClick={() => this.handlePrevious()}></i>
+                    <i className="fas fa-chevron-circle-right" onClick={() => this.handleNext()}></i>
+                    </div>
                 <audio controls className="audioplayer" id="player">
                     {this.state.tracks.map(tracks => {
                         return (
@@ -87,9 +91,6 @@ export default class PlayerPlaylists extends Component {
                     )}
                             
                 </audio>
-                    <button><img src="/assets/player/previous.svg" className="icons" onClick={() => this.handlePrevious()}/></button>
-                    <button><img src="/assets/player/next.svg" className="icons"onClick={() => this.handleNext()}/></button>
-    
                 </div>
                 
                

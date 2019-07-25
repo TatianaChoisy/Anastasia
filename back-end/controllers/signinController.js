@@ -17,7 +17,12 @@ module.exports.signIn = function (req, res) {
                         User: data[0]
                     };
                     let token = jwt.sign(payload, config.secret, { expiresIn: '1h' });
-                    res.status(201).json({ token })
+                    res.status(201);
+
+                    res.json({ 
+                        token : token,
+                        userID : data[0].UserID
+                    })
                 } else {
                     res.status(204).send({ error: 'Password did not match.'})
                 }  
@@ -26,9 +31,3 @@ module.exports.signIn = function (req, res) {
         }
     })
 };
-
-
-
-
-
-

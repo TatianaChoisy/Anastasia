@@ -37,6 +37,7 @@ var currentsRouter = require('./routes/currentsRoute');
 
 var contactRouter = require('./routes/contactRoute');
 
+// En premier paramètre il y a le chemin, et en second le fichier qui traitera la requête
 
 app.use('/signup', signupRouter);
 app.use('/signin', signinRouter);
@@ -46,6 +47,7 @@ app.use('/artists', artistsRouter);
 app.use('/tracksalbums', tracksAlbumsRouter);
 app.use('/tracksplaylists', tracksPlaylistsRouter)
 app.use('/playlists', playlistsRouter);
+
 app.use('/search', searchRouter);
 app.use('/genres', genresRouter);
 app.use('/tameimpala', tameimpalaRouter);

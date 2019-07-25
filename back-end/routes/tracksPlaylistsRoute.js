@@ -4,5 +4,7 @@ var router = express.Router();
 
 router.route('/:PlaylistsTracksID')
     .get(tracksController.displayTracksPlaylists);
+router.route('/addTrack')
+    .post(tracksController.addTrack);
 
 module.exports = router;

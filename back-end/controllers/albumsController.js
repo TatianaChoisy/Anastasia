@@ -9,18 +9,4 @@ albums.getAllAlbums(function (err, data) {
         if (err) res.send(err);
         else res.json(data);
 })
-    
-
-};
-
-exports.displayAllArtistsAlbums = function (req, res) {
-albums.getAllArtistsAlbums(function (err, data) {
-    if (err) {
-        res.send(err);
-    }
-    else {
-        res.json(data);
-    }
-})
-    
 };

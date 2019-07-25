@@ -24,6 +24,13 @@
     margin: 50px;
 }
 
+@media screen and (max-width: 1000px) {
+    .column-playlist {
+        margin: 0;
+        justify-content: center;
+    }
+}
+
 .column-column {
     display: flex;
     flex-flow: row wrap;
@@ -40,7 +47,7 @@
 }
 
 
-.name-playlist {
+.name-playlist-playlist {
     color: #FFFFFF;
     font-family: 'Helvetica Neue', sans-serif;
     font-weight: 500;
@@ -49,3 +56,4 @@
     margin: 0;
 
 }
+

@@ -2,9 +2,21 @@
     display: flex;
 }
 
+@media screen and (max-width: 1000px) {
+    .Currents {
+        flex-flow: column nowrap;
+    }
+}
+
 .currents-jacket {
     height: 300px;
     width: 300px;
+    margin-top: 50px;
+}
+
+.currents-jacket-mini {
+    height: 100px;
+    width: 100px;
     margin-top: 50px;
 }
 
@@ -37,8 +49,21 @@
 
 }
 
+@media screen and (max-width: 1000px) {
+    .left-currents {
+        justify-content: center;
+        align-items: center;
+    }
+}
+
 .column-currents {
     margin-right: 100px;
+}
+
+@media screen and (max-width: 1000px) {
+    .column-currents {
+        margin-right: 0;
+    }
 }
 
 .plus {

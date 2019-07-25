@@ -17,7 +17,6 @@ playingAlbum = (id) => {
       listen: id
     })
   }    
-
     
     
 componentDidMount() {
